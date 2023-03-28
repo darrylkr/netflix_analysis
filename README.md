@@ -24,11 +24,11 @@ description: a short description of the title
 There are some null values. I look to clean them up before exploring/visualizing.    
 ![Null Values](imgs/null_values.png)  
 
-### Duration:  
-Before:  
+### Duration 
+<ins>Before</ins>:  
 ![Duration](imgs/null_duration_before.png)    
 I take the rating column values and replace the missing values in duration, and set the rating values to null.  
-After:  
+<ins>After</ins>:  
 ![Duration after imputation](imgs/null_duration_after.png)
 
 We note that duration across the <ins>type</ins> column differs between Movies and TV Shows:  
@@ -48,7 +48,8 @@ Most TV shows have only 1 Season.
 ### Ratings
 ![Null Values](imgs/null_values.png)   
 We note the 4 null values + 3 additional rows from cleaning the duration column up earlier.  
-![Titles by Rating](imgs/rating_before.png)  
+#### Ratings by movies/tv shows
+![Rating by movie/tv show count](imgs/rating_before.png)  
 As there are many ratings, we categorize them into simpler forms according to the Netflix's guidelines at https://help.netflix.com/en/node/2064/us:  
 
 Kids  
@@ -106,7 +107,7 @@ But since genres can overlap for a single TV show/Movie, we should look at the g
 
 #### Kids Rating Category by TV Show Genres  
 ![TV Show Genres in Kids Category Rating](imgs/kid_category_TV_genres.png)  
-About 57% of TV Shows with rating_category: "Kids" are of the "Kids' TV" genre.  
+About 57% of TV Shows with 'Kids' rating_category belong to the the "Kids' TV" genre.  
 TV Comedies, International TV Shows, Docuseries follow after with only about half as many shows as the Kids' TV genre.  
 <br>
 These may not be genres that have a high appeal factor to children although they have been categorically rated as "Kids" TV Shows in the rating_category column. It could just mean that it is safe for Children to watch.  
@@ -117,61 +118,105 @@ Under the assumption that these shows rated "Children" solely mean that they are
 
 #### Kids Rating Category by Movie Genres  
 ![Movie Genres in Kids Category Rating](imgs/kid_category_Movies_genres.png)  
-About 50% of movies with rating_category = 'Kids' are of the Children & Family Movies genre.  
+About 50% of movies with 'Kids' rating_category are of the Children & Family Movies genre.  
 This means about 50-57% of tv shows/movies under rating_category = 'Kids' are definitively meant to appeal to Children viewers.  
 
 This number would amount to:  
 (1269 x 50%)Movies + (789 x 57%)TV Shows = 1092~ netflix children content.  
 Out of 8807 total netflix content, 12.39% is truly targeted at children.  
 
-#### 
-![TV Show Genres in Teens Category Rating](imgs/kid_category_TV_genres.png)  
+#### Teens Rating Category by TV Show Genres  
+![TV Show Genres in Teens Category Rating](imgs/teen_category_TV_genres.png)  
 
-![Movie Genres in Teens Category Rating](imgs/kid_category_Movies_genres.png)  
+#### Teens Rating Category by Movie Genres  
+![Movie Genres in Teens Category Rating](imgs/teen_category_Movie_genres.png)  
+
+Content in the 'Teens' rating_category are similar across TV Shows and Movies. Dramas, Comedies, and Romance are among the top genres.
+
+Interestingly, the 'Teen TV Shows' genres is not very high ranked for content in the 'Teens' rating_category.  
+Apart from losing out to the more common genres, it is also ranked below Anime Series and Korean TV Shows genres.  
+
+Dramas are the most popular in both TV Shows and Movies.  
+Romance is more common in TV Shows as compared to Movies.  
+Action & Adventure is significantly more common in Movies as compared to TV Shows.  
+
+#### Teens Rating Category by TV Show Genres   
+![TV Show Genres in Adult Category Rating](imgs/adult_category_TV_genres.png)    
+
+#### Adult Rating Category by Movie Genres   
+![Movie Genres in Adult Category Rating](imgs/adult_category_Movie_genres.png)    
+
+Content in the 'Adults' rating_category have Dramas and Comedies as the top genres. The Romance genre fell significantly in the rankings as compared to content in the 'Teens' rating_category.  
+
+Dramas are the most popular in both TV Shows and Movies.   
+The crime genre is more common in TV Shows as compared to Movies and the Action & Adventure genre is more common in Movies as compared to TV Shows.  
+
+Comedies and Dramas are the most popular genres across all 3 rating_category. Movies are similar between Adults and Teens in genre rankings, while for TV shows, Adults lean towards the Crime genre while Teens towards the Romance genre.  
+
+### Date
+The date columns is populated as follows:  
+![Date Format](imgs/date_format.png)    
+
+I break the date down for further exploration.  
+![Date Split](imgs/split_date.png)    
+
+#### Yearly Content Additions
+![Yearly Content Additions](imgs/yearly_content_additions.png)   
+Netflix started ramping up their content addition since 2016. Lets see how "up to date" do they keep with new additions.  
+
+#### Time difference between release_year and date_added
+![Release year vs Date added](imgs/speed_content_added.png)  
+About 36% of content is added to Netflix within the content's year of release.  
+
+#### Monthly Content Additions
+![Monthly Content Additions](imgs/monthly_content_additions.png)   
+Addition of content is fairly consistent across each month, with the most number of content additions being in July and December, with July having slightly more Movies than TV shows and vice versa for December.
+February and May have the least number of additions with February having about 30% less additions compared to July.
+
+The lower numbers in May and February are unusual. Check if data is added monthly:    
+![Month/Year date_added](imgs/monthly_content_additions.png)     
+Every month since 2016 has had content additions apart from October 2021.  
+
+#### Daily Content Additions  
+![Daily Content Additions](imgs/daily_content_additions.png)      
+Day of Month additions are highest on the 1st and 15th day of each month.    
+
+If we added up the content additions on 31st and 30th, (for last day of month less February) we would have the last day of the month at the 3rd highest rank in the percentage frequency.  
+
+Seeing how close days 2 and 16 are to the top ranks compared to the rest of the other days, it is likely that Netflix does it's large content additions at the start, middle, and end of the month over the span of 2 days.  
+
+
+#### Day of Week Content Additions  
+![Day of Week Content Additions](imgs/dayofweek_content_additions.png)   
+Content Additions occur the most on Friday and the least on the Weekends (Saturday and Sunday) and the first day of the week (Monday).
+
+
+### Country
+![Content by Country distribution](imgs/country_distribution.png)   
+TV Shows from Japan and South Korea are more prevalent in the content that netflix provides. This is interesting because Movies are the predominant content on Netflix.  Netflix could have a significant amount of viewership in Japan and South Korea, but this does not explain why the movie count is lower from both South Korea and Japan.  Perhaps Japanese and South Korean TV shows have more appeal to an international audience.  
+
+#### Japanese TV Show Genres  
+![Japanese TV Show Genres](imgs/japanese_tv_shows_genre.png)    
+'International TV Shows' as a genre does not exactly help in differentiating the TV Shows. Anime Series is a more apt descriptor.    
+International TV Shows and Anime Series make up the bulk of Japanese TV Shows.    
+<br>
+Filter all Japan TV Shows by genre = 'International TV Shows' to see how many International TV Shows also overlap as an Anime Series.    
+![International TV Shows that are Anime](imgs/international_is_anime.png)    
+Of the 145 International TV Shows, 105 of the shows are Anime Series.  
+This means a large majority of Japanese TV Shows are Anime Series.  
+
+#### South Korean TV Show Genres  
+![South Korean TV Show Genres](imgs/korean_tv_shows_genre.png)   
+Similar to Japan's TV Shows, 'International TV Shows' are the bulk of Korean TV Shows.
+<br>
+Filter all South Korean TV Shows by genre = 'International TV Shows' to see how many International TV Shows also overlap as Korean TV Shows.  
+![International TV Shows that are South Korean TV Shows](imgs/international_is_SK_show.png)   
+Of the 151 International TV Shows, 121 of the shows are Korean TV Shows.  
+Of the 131 Korean TV Shows, 10 are not international.  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Visitor count per museum by date from Jan 2014 to Nov 2018    
-![Visitor count before imputation](imgs/visitor_count_per_museum_before_impute.png)    
-Notice the visitor count for Firehouse Museum in Sep 2014 is particularly high. Under the assumption the visitor count is incorrectly recorded and not the result of any event/season/marketing effort, I imputed the visitor count for Firehouse Museum in September 2014.    
-<br>  
-__Assessing the seasonality of the Firehouse Museum visitors across the years.__  
-![Firehouse Museum annual visitors](imgs/firehouse_museum_annual_visitors.png)  
-Although there is doesn't seem to be a consistent pattern for visitors in September each year, looking at the average of June to August for each year could be a decent approximation of September's visitor numbers.  
-Years 2016 and 2017 have September's visitor count at the end of a downtrend whereas for 2015 and 2018, the visitor count ticks upwards. With heavier emphasis on 2015 for being more recent to 2014 as compared to other years, I simply used the mean visitors of June to August.  
-
+![The need for sub genres](imgs/need_for_sub_genres.png)   
 
 
 
