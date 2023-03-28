@@ -228,14 +228,14 @@ This means a large majority of Japanese TV Shows are Anime Series.
 
 #### South Korean TV Show Genres  
 ![South Korean TV Show Genres](imgs/korean_tv_shows_genre.png)   
-Similar to Japan's TV Shows, 'International TV Shows' are the bulk of Korean TV Shows.
+Similar to Japan's TV Shows, 'International TV Shows' are the bulk of Korean TV Shows.  
 <br>
 Filter all South Korean TV Shows by genre = 'International TV Shows' to see how many International TV Shows also overlap as Korean TV Shows.  
 <br>
+
 ![International TV Shows that are South Korean TV Shows](imgs/international_is_SK_show.png)   
 <br>
 Of the 151 International TV Shows, 121 of the shows are Korean TV Shows.  
-Of the 131 Korean TV Shows, 10 are not international.  
 
 ---
 ## Overall Findings / Analyses / Recommendations / Conclusion
