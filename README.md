@@ -8,17 +8,17 @@ Python notebook: [EDA Notebook](netflix.ipynb)
 ## Metadata  
 The dataset has 12 columns with 1 column being a unique identifier, and the remaining columns pertaining to a Netflix title as follows:  
 
-type: movie/tv series  
-title: title of the Netflix show  
-director: director name of the title  
-cast: cast involved in the title   
-country: country that published the title   
-date_added: date the title was added to Netflix  
-release_year: the title's year of release  
-rating: US's TV Parental Guidelines rating system, i.e. TV-PG, TV-MA, R, etc.  
-duration: duration of the title in minutes/seasons  
-listed_in: genres the title falls under  
-description: a short description of the title  
+__type__: movie/tv series  
+__title__: title of the Netflix show  
+__director__: director name of the title  
+__cast__: cast involved in the title   
+__country__: country that published the title   
+__date_added__: date the title was added to Netflix  
+__release_year__: the title's year of release  
+__rating__: US's TV Parental Guidelines rating system, i.e. TV-PG, TV-MA, R, etc.  
+__duration__: duration of the title in minutes/seasons  
+__listed_in__: genres the title falls under  
+__description__: a short description of the title  
 
 ## Data Cleaning/Exploration/Visualisation
 There are some null values. I look to clean them up before exploring/visualizing.    
@@ -243,7 +243,7 @@ Of the 151 International TV Shows, 121 of the shows are Korean TV Shows.
 ### <ins>Rating_Category</ins>  
 About 23% of shows on Netflix are for Children, (30+23)% for Teenagers, and (47+30+23)% for Adults.  
 
-### Genre  
+### <ins>Genre</ins>  
 - Comedies and Dramas are among the most popular genres across all 3 rating_category.  
 - Movies are similar between Adults and Teens in genre rankings; for TV shows, Adults lean towards the Crime genre and Teens towards the Romance genre.  
 - 12.39% of netflix content is truly targeted at children (of Kids' TV genre / Children & Family Movies genre).  
@@ -255,7 +255,7 @@ About 23% of shows on Netflix are for Children, (30+23)% for Teenagers, and (47+
 - Increase amount of TV Shows that appeal to the Kids rating_category  
 - Revamp the "Teen TV Shows" genre or check if they are being appropriately tagged to content.  
 
-### Dates
+### <ins>Dates</ins>
 
 #### Year
 Netflix adds about 36% of content within the same year of said content's release. 17% within 1 year, and 8% within 2 years.  
@@ -286,7 +286,7 @@ Since (1,2) and (30,31) are consecutive days, Operational optimizations can be a
 Content Additions occur the most on Friday and the least on the Weekends (Saturday and Sunday) and the first day of the week (Monday).   
 More work to be done on weekdays and less on weekends is more of a common thing and not so much specific to Netflix, hence no recommendation will be made.  
 
-### Cast / Director
+### <ins>Cast / Director</ins>
 TV Shows/Movies have the same director directing up to 22 different works on Netflix.  
 TV Shows/Movies have the same cast appearing in up to 42 different works on Netflix.  
 
@@ -294,7 +294,7 @@ TV Shows/Movies have the same cast appearing in up to 42 different works on Netf
 Netflix can look to leverage certain casts' familiarity with viewers created from the high number of times they appear in netflix content to incorporate these people into their marketing strategies. Selected casts will depend on their content's viewership demographics.  
 Directors with high accolades/who have produced popular content on Netflix can also be brought into the spotlight to raise user engagement with Netflix's viewers with upcoming works/teasers/interviews by such directors.  
 
-### Country
+### <ins>Country</ins>
 USA and UK content are the most common on Netflix regardless of content type.  
 However, as movies are the predominant content type on Netflix, it would be more common to observe a country produce more movies as compared to TV shows. This is not the case for Japan and Korea as they come in 3rd and 4th for number of TV Shows, but much lower for moviess.  
 This is likely attributed to the popularity of Anime Series and Korean TV Shows as these genres make up the bulk of the TV shows available on Netflix from Japan and Korea.  
