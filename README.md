@@ -8,6 +8,7 @@ Python notebook: [EDA Notebook](netflix.ipynb)
 ## Metadata  
 The dataset has 12 columns with 1 column being a unique identifier, and the remaining columns pertaining to a Netflix title as follows:  
 
+__show_id__: unique show identifier
 __type__: movie/tv series  
 __title__: title of the Netflix show  
 __director__: director name of the title  
