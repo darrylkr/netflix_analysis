@@ -306,5 +306,6 @@ As these genres lead in popularity for Japan and Korean TV shows, Netflix should
 ![The need for sub genres](imgs/need_for_sub_genres.png)   
 
 ## Tableau Visualization
+Link to Interactive Dashboard: [Netflix Dashboard](https://public.tableau.com/views/Netflix_16783875030960/Netflix?:language=en-US&:display_count=n&:origin=viz_share_link)  
 ![Netflix Dashboard](imgs/dashboard.png)    
 <br>
