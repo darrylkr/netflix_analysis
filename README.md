@@ -4,7 +4,7 @@
 
 Dataset file: [netflix titles dataset](netflix_titles.csv)  
 Python notebook: [EDA Notebook](netflix.ipynb)  
-Tableau Dashboard: [Netflix Dashboard](https://public.tableau.com/views/Netflix_16783875030960/Netflix?:language=en-US&:display_count=n&:origin=viz_share_link)
+Interactive Tableau Dashboard: [Netflix Dashboard](https://public.tableau.com/views/Netflix_16783875030960/Netflix?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 ## Metadata  
 The dataset has 12 columns with 1 column being a unique identifier, and the remaining columns pertaining to a Netflix title as follows:  
